@@ -1,4 +1,4 @@
-int ir = 5
+int ir = 5;
 
 void setup() {
   pinMode(ir, INPUT);
