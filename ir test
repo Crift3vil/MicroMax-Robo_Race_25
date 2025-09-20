@@ -1,0 +1,17 @@
+int ir = 5
+
+void setup() {
+  pinMode(ir, INPUT);
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  if (digitalRead(ir)==HIGH){
+    Serial.print("1");
+  }
+  else {
+    Serial.print("0");
+  }
+  delay(1000);
+}
