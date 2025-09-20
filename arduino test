@@ -1,4 +1,4 @@
-int inled = 3
+int inled = 3;
 
 void setup() {
   pinMode(inled, OUTPUT);
