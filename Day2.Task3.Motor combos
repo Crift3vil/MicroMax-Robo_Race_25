@@ -1,0 +1,78 @@
+int lm1;
+int lm2;
+int rm1;
+int lm2;
+int irl;
+int irr;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(lm1, OUTPUT);
+  pinMode(rm1, OUTPUT);
+  pinMode(rm2, OUTPUT);
+  pinMode(lm2, OUTPUT);
+  pinMode(irl, INPUT);
+  pinMode(irr, INPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  lf();
+  rs();
+  delay(1000);
+  rf();
+  ls();
+  delay(1000);
+  lb();
+  rs();
+  delay(1000);
+  ls();
+  rb();
+  delay(1000);
+  lf();
+  rf();
+  delay(1000);
+  lb();
+  rb();
+  delay(1000);
+  lb();
+  rf();
+  delay(1000);
+  lf();
+  rb();
+  delay(1000);
+  lb();
+  rb();
+  delay(1000);
+
+
+}
+
+void lf() {
+  digitalWrite(lm1, HIGH);
+  digitalWrite(lm2, LOW);
+}
+void lb() {
+  digitalWrite(lm2, HIGH);
+  digitalWrite(lm1, LOW);
+}
+
+void rf() {
+  digitalWrite(rm1, HIGH);
+  digitalWrite(rm2, LOW);
+}
+void rb() {
+  digitalWrite(rm2, HIGH);
+  digitalWrite(rm1, LOW);
+}
+
+void ls() {
+  digitalWrite(lm1, LOW);
+  digitalWrite(lm2, LOW);
+}
+
+void rs() {
+  digitalWrite(rm1, LOW);
+  digitalWrite(rm2, LOW);
+}
